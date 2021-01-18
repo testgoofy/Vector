@@ -24,6 +24,12 @@ package ch.testgoofy.math.vector;
 
 import ch.testgoofy.math.matrix.Matrix;
 
+/**
+ * Represents a mathematical vector
+ * @author  testgoofy
+ * @since 1.0.0
+ * @version 1.0.0
+ */
 public class Vector extends Matrix {
 
   /**
