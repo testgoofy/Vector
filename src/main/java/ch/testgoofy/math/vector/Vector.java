@@ -33,7 +33,21 @@ import ch.testgoofy.math.matrix.Matrix;
 public class Vector extends Matrix {
 
   /**
+   * Returns the absolut value of the vector
+   * @param vector  The vector of witch the absolut should be calculated
+   * @return  The absolut value of the vector
+   */
+  public static double absolut(Vector vector){
+    double sum = 0;
+    for (int i = 0; i < vector.rows; i++) {
+      sum += vector.data[i][0] * vector.data[i][0];
+    }
+    return Math.sqrt(sum);
+  }
+
+  /**
    * Calculates the dot product of tow vectors
+   * @see <a href="https://en.wikipedia.org/wiki/Dot_product" hreflang="en" title="Wikipedia">Dot Product</a>
    * @param v1 First Vector to be multiplied
    * @param v2 Second Vector to be multiplied
    * @return  The dot product
@@ -50,7 +64,16 @@ public class Vector extends Matrix {
   }
 
   /**
+   * Returns the absolut value of the vector
+   * @return  The absolut value
+   */
+  public double absolut(){
+    return absolut((Vector) new Matrix(data));
+  }
+
+  /**
    * Calculates the dot product with the vector
+   * @see <a href="https://en.wikipedia.org/wiki/Dot_product" hreflang="en" title="Wikipedia">Dot Product</a>
    * @param vector  The vector to be multiplied
    * @return  The dot product
    */
